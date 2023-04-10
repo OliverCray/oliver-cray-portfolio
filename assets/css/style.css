@@ -24,6 +24,12 @@ h1 { /* set styling for h1 */
     margin-bottom: 10px;
 }
 
+h1::after { /* adds the word Cray after Oliver in h1 with the secondary colour */
+    content: "Cray";
+    margin-left: 10px;
+    color: var(--secondary);
+}
+
 h2 { /* set styling for h2 */
     font-size: 1.5rem;
     margin: 10px 0 10px 15px;
@@ -32,6 +38,7 @@ h2 { /* set styling for h2 */
 p {
     margin-left: 15px;
 }
+
 
 header { /* set background to --primary and text colour to --tertiary */
     padding: 20px;
@@ -60,17 +67,17 @@ main {
     flex-wrap: wrap;
 }
 
-.contact > ul li {
+#contact > ul li {
     display: inline;
     margin-left: 15px;
 }
 
-.contact > ul li a {
+#contact > ul li a {
     text-decoration: none;
     color: var(--tertiary);
 }
 
-.contact > ul li a:hover {
+#contact > ul li a:hover {
     color: var(--secondary);
 }
 
