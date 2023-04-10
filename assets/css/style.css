@@ -2,6 +2,7 @@
     --primary: #222525;
     --secondary: #FFFAFB;
     --tertiary: #7DE2D1;
+    --nav-hover: #353a39;
 }
 
 * {
@@ -25,11 +26,16 @@ h1 { /* set styling for h1 */
 
 h2 { /* set styling for h2 */
     font-size: 1.5rem;
-    margin: 10px 0 10px 0;
+    margin: 10px 0 10px 15px;
+}
+
+p {
+    margin-left: 15px;
 }
 
 header { /* set background to --primary and text colour to --tertiary */
-    padding: 40px;
+    padding: 20px;
+    margin-top: 10px;
     background: var(--primary);
     color: var(--tertiary);
 }
@@ -45,14 +51,39 @@ nav a {
     text-align: center;
 }
 
+nav a:hover {
+    background-color: var(--nav-hover);
+}
+
 main {
     display: flex;
     flex-wrap: wrap;
 }
 
+.contact > ul li {
+    display: inline;
+    margin-left: 15px;
+}
+
+.contact > ul li a {
+    text-decoration: none;
+    color: var(--tertiary);
+}
+
+.contact > ul li a:hover {
+    color: var(--secondary);
+}
+
 img {
     width: 100%;
 }
+
+@media screen and (max-width: 992px) {
+    main,
+    nav {
+      flex-direction: row;
+    }
+  }
 
 @media screen and (max-width: 768px) {
     main,
