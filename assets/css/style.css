@@ -75,6 +75,12 @@ main {
     flex-wrap: wrap;
 }
 
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
 .contact > ul li {
     display: inline;
     margin-left: 15px;
@@ -101,17 +107,14 @@ section {
 .card {
     flex: 1 0 0;
     position: relative;
-    border-style: solid; 
-    border-width: 2px;
-    border-color: var(--tertiary);
-    margin-left: 10px;
+    padding: 10px;
 }
 
 .card img {
     width: 50%;
     min-width: 400px;
     height: 100%;
-    padding: 5px;
+    border: 5px solid var(--tertiary);
     opacity: 0.7;
     transition: 0.3s;
 }
@@ -126,7 +129,7 @@ section {
 
 .title {
     z-index: 1;
-    margin-left: 10px;
+    margin-left: 0px;
     position: absolute;
     bottom: 40%;
     background-color: var(--tertiary);   
