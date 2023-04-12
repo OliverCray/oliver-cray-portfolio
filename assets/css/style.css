@@ -54,11 +54,13 @@ p {
     margin-top: 10px;
     background: var(--primary);
     color: var(--tertiary);
+    z-index: 1;
 }
 
 nav {
     display: flex;
     justify-content: flex-end;
+
 }
 
 nav a {
@@ -76,14 +78,6 @@ main { /* applies to every element that is a child of main */
     display: flex;
     flex-wrap: wrap;
     margin-left: 100px;
-}
-
-footer {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 10px 0 10px 85px;
-    padding-right: 7px;
 }
 
 .about {
@@ -112,23 +106,32 @@ footer {
 .mywork {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+section {
+    display: flex;
+}
+
+.mywork section {
+    margin: 5px;
+    position: relative;
+    border: 5px solid var(--tertiary);
 }
 
 .mywork h2 {
     align-content: start;
 }
 
-.card {
-    display: flex;
-    justify-content: flex-start;
-    flex: 1 0 49%;
-    margin: 5px;
-    position: relative;
-    border: 5px solid var(--tertiary);
-    max-width: 50%;
+.main-image {
+    width: 100%;
 }
 
-.card img {
+.secondary-image {
+    width: 49%;
+}
+
+img {
     flex: 1 0 auto;
     width: 50%;
     height: auto;
@@ -136,14 +139,9 @@ footer {
     transition: 0.5s;
 }
 
-#main-image {
-    width: 200%;
-}
-
-.card img:hover {
+img:hover {
     opacity: 1;
 }
-
 
 .card-title {
     z-index: 1;
@@ -152,6 +150,14 @@ footer {
     bottom: 45%;
     background-color: var(--tertiary);   
     color: var(--primary);
+}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0 10px 85px;
+    padding-right: 7px;
 }
 
 @media screen and (max-width: 992px) {
