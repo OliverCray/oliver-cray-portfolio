@@ -67,21 +67,26 @@ main {
     flex-wrap: wrap;
 }
 
-#contact > ul li {
+.contact > ul li {
     display: inline;
     margin-left: 15px;
 }
 
-#contact > ul li a {
+.contact > ul li a {
     text-decoration: none;
     color: var(--tertiary);
 }
 
-#contact > ul li a:hover {
+.contact > ul li a:hover {
     color: var(--secondary);
 }
 
 img {
+    width: 50%;
+    padding: 5px;
+}
+
+#main-image {
     width: 100%;
 }
 
