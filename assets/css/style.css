@@ -7,6 +7,7 @@
 
 * {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
 }
 
 body { /* set base styling properties for all elements under <body> */
@@ -40,7 +41,10 @@ p {
 }
 
 
-header { /* set background to --primary and text colour to --tertiary */
+.main-header { /* set background to --primary and text colour to --tertiary */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 20px;
     margin-top: 10px;
     background: var(--primary);
@@ -81,19 +85,20 @@ main {
     color: var(--secondary);
 }
 
-img {
+.work img {
     width: 50%;
+    min-width: 400px;
     padding: 5px;
 }
 
-#main-image {
+.work img:first-of-type {
     width: 100%;
 }
 
 @media screen and (max-width: 992px) {
     main,
     nav {
-      flex-direction: row;
+      flex-direction: column;
     }
   }
 
