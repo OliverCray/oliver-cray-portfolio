@@ -56,6 +56,7 @@ p {
 
 nav {
     display: flex;
+    justify-content: flex-end;
 }
 
 nav a {
@@ -90,6 +91,7 @@ main {
 
 article {
     display: flex;
+    flex-wrap: wrap;
 }
 
 section {
@@ -98,12 +100,17 @@ section {
 
 .card {
     flex: 1 0 0;
-    flex-wrap: wrap;
+    position: relative;
+    border-style: solid; 
+    border-width: 2px;
+    border-color: var(--tertiary);
+    margin-left: 10px;
 }
 
 .card img {
     width: 50%;
     min-width: 400px;
+    height: 100%;
     padding: 5px;
     opacity: 0.7;
     transition: 0.3s;
@@ -115,6 +122,15 @@ section {
 
 .card img:hover {
     opacity: 1;
+}
+
+.title {
+    z-index: 1;
+    margin-left: 10px;
+    position: absolute;
+    bottom: 40%;
+    background-color: var(--tertiary);   
+    color: var(--primary);
 }
 
 @media screen and (max-width: 992px) {
