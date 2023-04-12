@@ -112,7 +112,6 @@ section {
 
 .card img {
     width: 50%;
-    min-width: 400px;
     height: 100%;
     border: 5px solid var(--tertiary);
     opacity: 0.7;
