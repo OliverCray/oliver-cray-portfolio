@@ -60,7 +60,12 @@ p {
 nav {
     display: flex;
     justify-content: flex-end;
-
+    position: sticky;
+    font-size: 2rem;
+    width: 100%;
+    top: 0px;
+    z-index: 2;
+    background: var(--primary);
 }
 
 nav a {
@@ -82,6 +87,7 @@ main { /* applies to every element that is a child of main */
 
 .about {
     display: flex;
+    padding-top: 50px;
 }
 
 .about > p {
@@ -107,6 +113,7 @@ main { /* applies to every element that is a child of main */
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
+    padding-top: 50px;
 }
 
 section {
