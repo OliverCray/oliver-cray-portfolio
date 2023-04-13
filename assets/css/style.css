@@ -48,6 +48,7 @@ h2 { /* set styling for h2 */
     padding-right: 0.5%;
     border-right: 3px solid var(--border-header);
     width: 20%;
+    align-content: center;
 }
 
 .main-header { /* set background to --primary and text colour to --tertiary */
@@ -128,10 +129,6 @@ section {
     border: 5px solid var(--tertiary);
 }
 
-.mywork h2 {
-    align-content: start;
-}
-
 .main-image {
     width: 100%;
 }
@@ -156,7 +153,7 @@ img:hover {
     z-index: 1;
     font-size: 2em;
     position: absolute;
-    margin-top: 50%;
+    margin-top: 30%;
     background-color: var(--tertiary);   
     color: var(--primary);
 }
@@ -183,9 +180,34 @@ img:hover {
     color: var(--secondary);
 }
 
+@media screen and (max-width: 992px) {
+    main,
+    nav {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    * {
+        scroll-padding-top: 22%;
+    }
+
+    .card-title {
+        font-size: 1em;
+    }
+  }
+
 @media screen and (max-width: 768px) {
     main,
     nav {
       flex-direction: column;
+      width: 100%;
+    }
+
+    * {
+        scroll-padding-top: 22%;
+    }
+
+    .card-title {
+        font-size: 1em;
     }
   }
