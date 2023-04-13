@@ -4,11 +4,13 @@
     --tertiary: #7DE2D1;
     --nav-hover: #353a39;
     --border-header: #858786;
+    --nav-header: #272b2a;
 }
 
 * {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     box-sizing: border-box;
+    scroll-padding-top: 8%;
 }
 
 body { /* set base styling properties for all elements under <body> */
@@ -45,7 +47,7 @@ h2 { /* set styling for h2 */
     margin: 0.5% 0 0.5% 1%;
     padding-right: 0.5%;
     border-right: 3px solid var(--border-header);
-    width: 30%;
+    width: 20%;
 }
 
 .main-header { /* set background to --primary and text colour to --tertiary */
@@ -66,7 +68,7 @@ nav {
     width: 100%;
     top: 0px;
     z-index: 2;
-    background: var(--primary);
+    background: var(--nav-header);
 }
 
 nav a {
@@ -87,12 +89,16 @@ main { /* applies to every element that is a child of main */
     margin: 2rem auto;
 }
 
+article {
+    padding: 1%
+}
+
 .about {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
-    width: 63%;
+    width: 73%;
 }
 
 .about > p {
@@ -109,7 +115,7 @@ main { /* applies to every element that is a child of main */
     flex-wrap: wrap;
     justify-content: flex-start;
     float: right;
-    width: 63%;
+    width: 73%;
 }
 
 section {
@@ -181,8 +187,5 @@ img:hover {
     main,
     nav {
       flex-direction: column;
-    }
-    .secondary-image {
-        width: 49%;
     }
   }
