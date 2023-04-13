@@ -48,7 +48,7 @@ h2 { /* set styling for h2 */
     padding-right: 0.5%;
     border-right: 3px solid var(--border-header);
     width: 21%;
-    align-content: center;
+    align-content: flex-start;
 }
 
 .main-header { /* set background to --primary and text colour to --tertiary */
@@ -59,6 +59,10 @@ h2 { /* set styling for h2 */
     margin-top: 1%;
     background: var(--primary);
     color: var(--tertiary);
+}
+
+section a {
+    display: flex;
 }
 
 nav {
@@ -164,7 +168,7 @@ img:hover {
     z-index: 1;
     font-size: 1.4rem;
     position: absolute;
-    margin-top: 10%;
+    margin-top: 20%;
     background-color: var(--tertiary);   
     color: var(--primary);
 }
@@ -209,7 +213,7 @@ img:hover {
     }
 
     .card-title-main {
-        font-size: 1.2rem;
+        font-size: 1.8rem;
     }
 
     .card-title-secondary {
@@ -237,7 +241,7 @@ img:hover {
     }
 
     .card-title-main {
-        font-size: 1em;
+        font-size: 1.8em;
     }
 
     .card-title-secondary {
