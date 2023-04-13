@@ -87,6 +87,7 @@ main { /* applies to every element that is a child of main */
 
 .about {
     display: flex;
+    align-content: center;
     padding-top: 50px;
 }
 
@@ -172,11 +173,17 @@ footer {
     nav {
       flex-direction: column;
     }
+    .secondary-image {
+        width: 46%;
+    }
   }
 
 @media screen and (max-width: 768px) {
     main,
     nav {
       flex-direction: column;
+    }
+    .secondary-image {
+        width: 46%;
     }
   }
