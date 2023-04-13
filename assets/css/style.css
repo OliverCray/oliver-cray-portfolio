@@ -149,7 +149,7 @@ section a {
 }
 
 .main-image {
-    /* main image is approximately twice the size of the other images */
+    /* makes main image larger than the other images */
     width: 100%;
 }
 
