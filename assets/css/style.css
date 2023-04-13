@@ -35,16 +35,12 @@ h1::after { /* adds the word Cray after Oliver in h1 with the secondary colour *
 h2 { /* set styling for h2 */
     display: flex;
     flex-wrap: wrap;
+    float: left;
     font-size: 2rem;
-    margin: 10px 0 10px 15px;
-    padding-right: 7px;
+    margin: 0.5% 0 0.5% 1%;
+    padding-right: 0.5%;
     border-right: 3px solid var(--border-header);
 }
-
-p {
-    margin-left: 15px;
-}
-
 
 .main-header { /* set background to --primary and text colour to --tertiary */
     display: flex;
@@ -54,7 +50,6 @@ p {
     margin-top: 10px;
     background: var(--primary);
     color: var(--tertiary);
-    z-index: 1;
 }
 
 nav {
@@ -70,7 +65,7 @@ nav {
 
 nav a {
     color: var(--tertiary);
-    padding: 14px 20px;
+    padding: 1% 1.5%;
     text-decoration: none;
     text-align: center;
 }
@@ -82,13 +77,16 @@ nav a:hover {
 main { /* applies to every element that is a child of main */
     display: flex;
     flex-wrap: wrap;
-    margin-left: 100px;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
 .about {
     display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     align-content: center;
-    padding-top: 50px;
+    padding-top: 2%;
 }
 
 .about > p {
@@ -96,25 +94,15 @@ main { /* applies to every element that is a child of main */
     align-items: center;
 }
 
-.contact > ul li {
-    display: inline;
-    margin-left: 15px;
-}
-
-.contact > ul li a {
-    text-decoration: none;
-    color: var(--tertiary);
-}
-
-.contact > ul li a:hover {
-    color: var(--secondary);
+.about-text {
+    padding: 0.8%;
 }
 
 .mywork {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    padding-top: 50px;
+    padding-top: 2%;
 }
 
 section {
@@ -122,7 +110,7 @@ section {
 }
 
 .mywork section {
-    margin: 5px;
+    margin: 0.5%;
     position: relative;
     border: 5px solid var(--tertiary);
 }
@@ -164,19 +152,23 @@ footer {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin: 10px 0 10px 85px;
-    padding-right: 7px;
+    margin: 2% 0 2% 1%;
+    padding-right: 7%;
+}   
+
+.contact > ul li {
+    display: inline;
+    margin-left: 10px;
 }
 
-@media screen and (max-width: 992px) {
-    main,
-    nav {
-      flex-direction: column;
-    }
-    .secondary-image {
-        width: 46%;
-    }
-  }
+.contact > ul li a {
+    text-decoration: none;
+    color: var(--tertiary);
+}
+
+.contact > ul li a:hover {
+    color: var(--secondary);
+}
 
 @media screen and (max-width: 768px) {
     main,
@@ -184,6 +176,6 @@ footer {
       flex-direction: column;
     }
     .secondary-image {
-        width: 46%;
+        width: 49%;
     }
   }
