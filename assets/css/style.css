@@ -55,8 +55,8 @@ h2 { /* set styling for h2 */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 20px;
-    margin-top: 10px;
+    padding: 2%;
+    margin-top: 1%;
     background: var(--primary);
     color: var(--tertiary);
 }
@@ -117,6 +117,7 @@ article {
     justify-content: flex-start;
     float: right;
     width: 73%;
+    margin-bottom: -2.8%;
 }
 
 section {
@@ -135,25 +136,35 @@ section {
 
 .secondary-image {
     width: 49%;
+    height: 20%;
 }
 
 img {
     flex: 1 0 auto;
     width: 50%;
-    height: auto;
     opacity: 0.4;
     transition: 0.5s;
+    object-fit: cover;
 }
 
 img:hover {
     opacity: 1;
 }
 
-.card-title {
+.card-title-main {
     z-index: 1;
-    font-size: 2em;
+    font-size: 2rem;
     position: absolute;
-    margin-top: 30%;
+    margin-top: 40%;
+    background-color: var(--tertiary);   
+    color: var(--primary);
+}
+
+.card-title-secondary {
+    z-index: 1;
+    font-size: 1.4rem;
+    position: absolute;
+    margin-top: 10%;
     background-color: var(--tertiary);   
     color: var(--primary);
 }
@@ -181,33 +192,57 @@ img:hover {
 }
 
 @media screen and (max-width: 992px) {
-    main,
     nav {
       flex-direction: column;
       width: 100%;
+      font-size: 1.5rem;
+    }
+
+    main {
+        font-size: 0.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
     }
 
     * {
         scroll-padding-top: 22%;
     }
 
-    .card-title {
-        font-size: 1em;
+    .card-title-main {
+        font-size: 1.2rem;
+    }
+
+    .card-title-secondary {
+        font-size: 1rem;
     }
   }
 
 @media screen and (max-width: 768px) {
-    main,
     nav {
       flex-direction: column;
       width: 100%;
+      font-size: 1rem;
+    }
+
+    main {
+        font-size: 0.5rem;
+    }
+
+    h2 {
+        font-size: 1rem;
     }
 
     * {
         scroll-padding-top: 22%;
     }
 
-    .card-title {
+    .card-title-main {
         font-size: 1em;
+    }
+
+    .card-title-secondary {
+        font-size: 0.8rem;
     }
   }
