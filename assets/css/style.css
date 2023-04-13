@@ -7,9 +7,11 @@
     --nav-header: #272b2a;
 }
 
-* {
+* { 
+    /* sets the main and fallback fonts for the entire sheet */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     box-sizing: border-box;
+    /* defines offset when using nav links to prevent the navbar from covering content */
     scroll-padding-top: 8%;
 }
 
@@ -19,7 +21,9 @@ body { /* set base styling properties for all elements under <body> */
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
+    /* assigns primary colour to the background of main */
     background: var(--primary);
+    /* assigns secondary colour to the text of main */
     color: var(--secondary);
 }
 
@@ -47,11 +51,12 @@ h2 { /* set styling for h2 */
     margin: 0.5% 0 0.5% 1%;
     padding-right: 0.5%;
     border-right: 3px solid var(--border-header);
+    /* causes headers to appear on left of respective articles */
     width: 21%;
     align-content: flex-start;
 }
 
-.main-header { /* set background to --primary and text colour to --tertiary */
+.main-header { /* set styling for the main header at the top of the page*/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -61,22 +66,20 @@ h2 { /* set styling for h2 */
     color: var(--tertiary);
 }
 
-section a {
-    display: flex;
-}
-
-nav {
+nav { /* sets styling of the navbar */
     display: flex;
     justify-content: flex-end;
+    /* the navbar will stick to the top of the screen once scrolled past */
     position: sticky;
     font-size: 2rem;
     width: 100%;
     top: 0px;
+    /* the navbar will appear in front of all content behind it */
     z-index: 2;
     background: var(--nav-header);
 }
 
-nav a {
+nav a { /* sets the styling for the text on the navbar */
     color: var(--tertiary);
     padding: 1% 1.5%;
     text-decoration: none;
@@ -84,12 +87,14 @@ nav a {
 }
 
 nav a:hover {
+    /* when the user hovers over a word the box containing the word will change colour */
     background-color: var(--nav-hover);
 }
 
 main { /* applies to every element that is a child of main */
     display: flex;
     flex-wrap: wrap;
+    /* sets width of main and children to 80% of page width */
     width: 80%;
     margin: 2rem auto;
 }
@@ -103,6 +108,7 @@ article {
     flex-wrap: wrap;
     flex-direction: column;
     align-content: center;
+    /* about section will appear to the right of its "About Me" header */
     width: 73%;
 }
 
@@ -112,6 +118,7 @@ article {
 }
 
 .about-text {
+    /* adds padding around paragraphs to make them distinct from one another */
     padding: 0.8%;
 }
 
@@ -120,6 +127,7 @@ article {
     flex-wrap: wrap;
     justify-content: flex-start;
     float: right;
+    /* mywork section will appear to the right of "Work" header */
     width: 73%;
     margin-bottom: -2.8%;
 }
@@ -128,43 +136,60 @@ section {
     display: flex;
 }
 
+section a {
+    display: flex;
+}
+
 .mywork section {
     margin: 0.5%;
-    position: relative;
+    /* allows content to be placed away from its normal position */
+    position: relative; 
+    /* adds a solid 5px wide border around each image with the tertiary colour */
     border: 5px solid var(--tertiary);
 }
 
 .main-image {
+    /* main image is approximately twice the size of the other images */
     width: 100%;
 }
 
 .secondary-image {
     width: 49%;
+    /* reduces height of targeted images */
     height: 20%;
 }
 
 img {
     flex: 1 0 auto;
     width: 50%;
+    /* makes the images partially transparent */
     opacity: 0.4;
+    /* sets time over which an effect occurs, here it smooths out transition of images to be fully opaque */
     transition: 0.5s;
+    /* maintains aspect ratio while allowing the object to fit the box, clips oversized images */
     object-fit: cover;
 }
 
 img:hover {
+    /* images become opaque when hovered over */
     opacity: 1;
 }
 
-.card-title-main {
+.card-title-main { /* sets styling for text over the main image */
+    /* appears above all content except the navbar, this prevents the text being obscured by transparency */
     z-index: 1;
     font-size: 2rem;
+    /* text is fixed over respective images */
     position: absolute;
+    /* moves the text box down the image */
     margin-top: 40%;
+    /* assigns tertiary colour as a background for the text-box */
     background-color: var(--tertiary);   
+    /* assigns primary colour to the text */
     color: var(--primary);
 }
 
-.card-title-secondary {
+.card-title-secondary { /* sets styling for text over the secondary images */
     z-index: 1;
     font-size: 1.4rem;
     position: absolute;
@@ -176,15 +201,19 @@ img:hover {
 .contact {
     display: flex;
     flex-wrap: wrap;
+    /* aligns text to be centered within container */
     align-items: center;
 }   
 
 .contact > ul li {
+    /* moves list item to be in a row instead of a column */
     display: inline;
+    /* spaces out list items from one another */
     margin-left: 10px;
 }
 
 .contact > ul li a {
+    /* removes any default appearances from list items, e.g. underlines */
     text-decoration: none;
     color: var(--tertiary);
 }
@@ -193,10 +222,12 @@ img:hover {
     color: var(--secondary);
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 992px) { /* overrides certain styling options when screen-width is at or below 992px */
     nav {
+      /* moves nav from a row to a column */
       flex-direction: column;
       width: 100%;
+      /* decrease font size */
       font-size: 1.5rem;
     }
 
@@ -209,6 +240,7 @@ img:hover {
     }
 
     * {
+        /* increase scroll-padding-top to not obscure content after using nav links following resize */
         scroll-padding-top: 22%;
     }
 
@@ -221,7 +253,7 @@ img:hover {
     }
   }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) { /* overrides certain styling options when screen-width is at or below 768px */
     nav {
       flex-direction: column;
       width: 100%;
@@ -229,7 +261,7 @@ img:hover {
     }
 
     main {
-        font-size: 0.5rem;
+        font-size: 0.6rem; 
     }
 
     h2 {
