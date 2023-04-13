@@ -47,7 +47,7 @@ h2 { /* set styling for h2 */
     margin: 0.5% 0 0.5% 1%;
     padding-right: 0.5%;
     border-right: 3px solid var(--border-header);
-    width: 20%;
+    width: 21%;
     align-content: center;
 }
 
@@ -173,8 +173,6 @@ img:hover {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin: 2% 0 2% 1%;
-    padding-right: 7%;
 }   
 
 .contact > ul li {
