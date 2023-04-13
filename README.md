@@ -47,4 +47,4 @@ THEN I am presented with a responsive layout that adapts to my viewport
 
 ## Deployed Webpage
 
-The published page is available here: 
+The published page is available here: https://olivercray.github.io/oliver-cray-portfolio/
